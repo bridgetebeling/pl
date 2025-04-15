@@ -4,11 +4,11 @@ cabal-version: 2.2
 --
 -- see: https://github.com/sol/hpack
 
-name:           myproject
+name:           DailyHaskell
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/myproject#readme>
-homepage:       https://github.com/githubuser/myproject#readme
-bug-reports:    https://github.com/githubuser/myproject/issues
+description:    Please see the README on GitHub at <https://github.com/githubuser/DailyHaskell#readme>
+homepage:       https://github.com/githubuser/DailyHaskell#readme
+bug-reports:    https://github.com/githubuser/DailyHaskell/issues
 author:         Author name here
 maintainer:     example@example.com
 copyright:      2025 Author name here
@@ -21,15 +21,15 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/myproject
+  location: https://github.com/githubuser/DailyHaskell
 
 library
   exposed-modules:
       Lib
   other-modules:
-      Paths_myproject
+      Paths_DailyHaskell
   autogen-modules:
-      Paths_myproject
+      Paths_DailyHaskell
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
@@ -37,31 +37,31 @@ library
       base >=4.7 && <5
   default-language: Haskell2010
 
-executable myproject-exe
+executable DailyHaskell-exe
   main-is: Main.hs
   other-modules:
-      Paths_myproject
+      Paths_DailyHaskell
   autogen-modules:
-      Paths_myproject
+      Paths_DailyHaskell
   hs-source-dirs:
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
-    , myproject
+      DailyHaskell
+    , base >=4.7 && <5
   default-language: Haskell2010
 
-test-suite myproject-test
+test-suite DailyHaskell-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_myproject
+      Paths_DailyHaskell
   autogen-modules:
-      Paths_myproject
+      Paths_DailyHaskell
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
-    , myproject
+      DailyHaskell
+    , base >=4.7 && <5
   default-language: Haskell2010
