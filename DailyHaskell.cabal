@@ -4,14 +4,17 @@ version:             0.1.0.0
 build-type:          Simple
 
 library
-  exposed-modules:     DailyOne
+  exposed-modules:     DailyFour
   hs-source-dirs:      src
   build-depends:       base >=4.7 && <5
   default-language:    Haskell2010
 
-test-suite DailyHaskell-test
+test-suite DailyFourSpec
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
-  main-is:             Spec.hs
-  build-depends:       base, hspec, DailyHaskell
+  main-is:             DailyFourSpec.hs
+  build-depends:       base >= 4.7 && < 5,
+                       hspec,
+                       HUnit,
+                       DailyHaskell
   default-language:    Haskell2010
