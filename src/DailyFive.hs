@@ -19,4 +19,8 @@ squareList = map (\x -> (x, x * x))
 -- Takes a list of Strings and returns True for each string that starts with a lowercase letter.
 -- Uses isLower from Data.Char and assumes each string is non-empty.
 findLowercase :: [String] -> [Bool]
-findLowercase = map (\s -> isLower (head s))
+findLowercase = map check
+  where
+    check (x:_) = isLower x
+    check []    = False
+
