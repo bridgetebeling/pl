@@ -1,13 +1,26 @@
+-- test/EvalSpec.hs
 module EvalSpec where
 
 import Test.Hspec
-import Expr
-import Eval
-import Error
+import Expr (Value(..))
+import Eval (evalString)
+import Error (ErrorType)
 
 spec :: Spec
 spec = do
     describe "eval expressions" $ do
+        it "evaluates a variable via let" $
+            evalString "(let (x 10) x)" `shouldBe` Right (IntValue 10)
+
+        it "evaluates (if true 1 0)" $
+            evalString "(if true 1 0)" `shouldBe` Right (IntValue 1)
+
+        it "evaluates (if false 1 0)" $
+            evalString "(if false 1 0)" `shouldBe` Right (IntValue 0)
+
+        it "evaluates negated variable (let (x 5) -x)" $
+            evalString "(let (x 5) -x)" `shouldBe` Right (IntValue (-5))
+
         it "evaluates number: 1235" $ 
             evalString "1235" `shouldBe` Right (IntValue 1235)
 

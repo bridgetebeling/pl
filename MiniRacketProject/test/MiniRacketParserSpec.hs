@@ -7,12 +7,10 @@ import Error
 
 type ParseResult = Either ErrorType (Expr, String)
 
-expr :: Either ErrorType (a2, b) -> a2
-expr (Right (e, _)) = e 
-expr (Left (SyntaxError msg)) = error msg
+expr :: Either ErrorType (Expr, String) -> Expr
+expr (Right (e, _)) = e
 expr (Left (ParseError msg)) = error msg
-expr (Left NoParse) = error "no matching parse"
-expr _ = error "expr in MiniRacketParser.hs is not fully implemented yet..."
+expr (Left err) = error ("Unexpected error: " ++ show err)
 
 spec :: Spec 
 spec = do 
@@ -60,3 +58,20 @@ spec = do
         it "parses (< 2 3)" $
             parseString "(< 2 3)" `shouldBe`
                 Right (CompExpr Lt (LiteralExpr (IntValue 2)) (LiteralExpr (IntValue 3)), "")
+    describe "parse variables and negated variables" $ do
+        it "parses var x" $
+            parseString "x" `shouldBe` Right (VarExpr "x", "")
+
+        it "parses negated var -x" $
+            parseString "-x" `shouldBe`
+                Right (MathExpr Sub [LiteralExpr (IntValue 0), VarExpr "x"], "")
+
+    describe "parse if expressions" $ do
+        it "parses (if true 1 2)" $
+            parseString "(if true 1 2)" `shouldBe`
+                Right (IfExpr (LiteralExpr (BoolValue True)) (LiteralExpr (IntValue 1)) (LiteralExpr (IntValue 2)), "")
+
+    describe "parse let expressions" $ do
+        it "parses (let (x 3) x)" $
+            parseString "(let (x 3) x)" `shouldBe`
+                Right (LetExpr "x" (LiteralExpr (IntValue 3)) (VarExpr "x"), "")

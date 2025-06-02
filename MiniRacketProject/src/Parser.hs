@@ -1,4 +1,22 @@
-module Parser where
+module Parser (
+    Parser(..),
+    parse,
+    failParse,
+    ident,
+    natural,
+    symbol,
+    token,
+    spacedToken,
+    identifier,
+    spacedIdentifier,
+    int,
+    eatspace,
+    string,
+    zeroOrMore,
+    oneOrMore,
+    space,
+    char
+) where
 
 import Control.Applicative
 import Data.Char
@@ -26,7 +44,7 @@ newtype Parser a = P { parse :: String -> Either ErrorType (a, String) }
 -- All other Parsers will be constructed using this Parser!
 item :: Parser Char
 item = P (\case 
-            [] -> Left NoParse
+            [] -> Left (ParseError "empty input")
             (x:xs) -> Right (x,xs))
 
 -- Examples using the item parser:
@@ -102,10 +120,12 @@ errorParse t = P (\_ -> Left t)
 
 -- define a parser that fails with a given message
 noParse :: Parser a
-noParse = errorParse NoParse
+noParse = errorParse (ParseError "no parse")
+
 
 syntaxError :: String -> Parser a
-syntaxError msg = errorParse $ SyntaxError msg 
+syntaxError msg = errorParse (ParseError msg)
+
 
 failParse :: String -> Parser a
 failParse msg = errorParse $ ParseError msg
@@ -121,7 +141,7 @@ instance Alternative Parser where
     -- (<|>) :: Parser a -> Parser a -> Parser a 
     p <|> q = P (\inp -> case parse p inp of 
         -- ignore these two Left cases, but not any other Left cases
-                     Left NoParse -> parse q inp
+                     Left (ParseError _) -> parse q inp
                      Left (ParseError _) -> parse q inp
                      otherParse -> otherParse)
                  

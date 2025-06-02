@@ -1,21 +1,22 @@
-module Environment where
+-- src/Environment.hs
+module Environment (
+    Env,
+    emptyEnv,
+    lookup,
+    bindName
+) where
 
-import qualified Data.List
+import qualified Data.List (lookup)
+import Prelude hiding (lookup)
+import Expr (Value)
 
--- Create an Empty Environment
-emptyEnv :: [a]
-emptyEnv = [] 
+type Env = [(String, Value)]
 
--- lookup a name in an Environment
---   Consume a name 
---   Produce Just val if the name is bound to val in the Environment
---     and Nothing if the name is not bound in the Environment
-lookup :: Eq k => k -> [(k,v)] -> Maybe v
+emptyEnv :: Env
+emptyEnv = []
+
+lookup :: String -> Env -> Maybe Value
 lookup = Data.List.lookup
 
-
--- bindName
---   Extend an Environment with a new name and value pair
---   In other words, bind the name to a given value
-bindName :: n -> v -> [(n,v)] -> [(n,v)]
+bindName :: String -> Value -> Env -> Env
 bindName name val env = (name, val) : env

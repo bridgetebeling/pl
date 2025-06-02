@@ -1,0 +1,28 @@
+/Users/bridgetebeling/.stack/programs/aarch64-osx/ghc-8.10.7/lib/ghc-8.10.7/include/ghcversion.h:
+  hash: c013160c9aa8a98f4638616496dce720c23ceca8ef9d6b3212b654642fbda5e4
+/Users/bridgetebeling/Downloads/MiniRacketProject/.stack-work/dist/aarch64-osx/ghc-8.10.7/build/autogen/Paths_MiniRacket.hs:
+  hash: 681019b2b068f99f0b7811e9a633e72eae02c1f80490372d14284120ca017589
+/Users/bridgetebeling/Downloads/MiniRacketProject/.stack-work/dist/aarch64-osx/ghc-8.10.7/build/autogen/cabal_macros.h:
+  hash: 7de8d44b016571882b1b3732106d9f49918e3c66d876ad1c85a6dce103d7177c
+/Users/bridgetebeling/Downloads/MiniRacketProject/ChangeLog.md:
+  hash: e3ab8b5d20487b656df7293809c9da89123e1218f91d688c5c8d5cfa6e84f123
+/Users/bridgetebeling/Downloads/MiniRacketProject/MiniRacket.cabal:
+  hash: f7d9b012643f70d0289a9106dd7100d9db2a995e76704d643991a439359a8e43
+/Users/bridgetebeling/Downloads/MiniRacketProject/README.md:
+  hash: e3ab8b5d20487b656df7293809c9da89123e1218f91d688c5c8d5cfa6e84f123
+/Users/bridgetebeling/Downloads/MiniRacketProject/package.yaml:
+  hash: e58bf667ce6697b33608c272701ab676659544b768e01625e4a69cec81fbabc4
+/Users/bridgetebeling/Downloads/MiniRacketProject/src/Environment.hs:
+  hash: 789118e118c58ee8d1f9f3c942f0a1430c754055a5de55d24c1e0e4308faddb0
+/Users/bridgetebeling/Downloads/MiniRacketProject/src/Error.hs:
+  hash: 823fa0c3ae4ae6d606a3f99f578d5cab2409647bdf6fe1611a3d989a07ebacd4
+/Users/bridgetebeling/Downloads/MiniRacketProject/src/Eval.hs:
+  hash: 1771c5c8aadca0b762cc548eb66d519e83d72716d548959fe45089a0457de8e3
+/Users/bridgetebeling/Downloads/MiniRacketProject/src/Expr.hs:
+  hash: 0ff7bed4c8d8f3525b698647b5b0f07756af6e05c462680cb2fa451a306f01e6
+/Users/bridgetebeling/Downloads/MiniRacketProject/src/Lib.hs:
+  hash: 11d6d255cb397fa45980eb516ea685146565d9de2108c4eea356ea41db8364be
+/Users/bridgetebeling/Downloads/MiniRacketProject/src/MiniRacketParser.hs:
+  hash: 30f8c0ffcc7a67d9ec599abd2e380c1272b6566b016beb96178c6a199a6826e4
+/Users/bridgetebeling/Downloads/MiniRacketProject/src/Parser.hs:
+  hash: fe07ac09403088519b4a50cd1b0423ba9f75d4bf2fb4f311a950995e78f039ef

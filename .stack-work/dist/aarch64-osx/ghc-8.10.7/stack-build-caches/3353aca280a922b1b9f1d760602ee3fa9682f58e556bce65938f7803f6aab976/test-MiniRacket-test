@@ -1,0 +1,20 @@
+/Users/bridgetebeling/.stack/programs/aarch64-osx/ghc-8.10.7/lib/ghc-8.10.7/include/ghcversion.h:
+  hash: c013160c9aa8a98f4638616496dce720c23ceca8ef9d6b3212b654642fbda5e4
+? /Users/bridgetebeling/Downloads/MiniRacketProject/.stack-work/dist/aarch64-osx/ghc-8.10.7/build/MiniRacket-test/autogen/Paths_MiniRacket.hs
+: hash: d69c695616df1d1e4c36f8fbc904e7b2821116376ef65b393f43a3e96ce85d5b
+? /Users/bridgetebeling/Downloads/MiniRacketProject/.stack-work/dist/aarch64-osx/ghc-8.10.7/build/MiniRacket-test/autogen/cabal_macros.h
+: hash: 0a1569f271ca482b1ea029e496fe4823df0e7e70842bee088765e7b1cc2a0a00
+/Users/bridgetebeling/Downloads/MiniRacketProject/ChangeLog.md:
+  hash: e3ab8b5d20487b656df7293809c9da89123e1218f91d688c5c8d5cfa6e84f123
+/Users/bridgetebeling/Downloads/MiniRacketProject/MiniRacket.cabal:
+  hash: f7d9b012643f70d0289a9106dd7100d9db2a995e76704d643991a439359a8e43
+/Users/bridgetebeling/Downloads/MiniRacketProject/README.md:
+  hash: e3ab8b5d20487b656df7293809c9da89123e1218f91d688c5c8d5cfa6e84f123
+/Users/bridgetebeling/Downloads/MiniRacketProject/package.yaml:
+  hash: e58bf667ce6697b33608c272701ab676659544b768e01625e4a69cec81fbabc4
+/Users/bridgetebeling/Downloads/MiniRacketProject/test/EvalSpec.hs:
+  hash: 43e2a4cf8dc951947313751fdcaeaff4b1195aa626c8907951ef263faaa3c50b
+/Users/bridgetebeling/Downloads/MiniRacketProject/test/MiniRacketParserSpec.hs:
+  hash: 44823f3b24a781c5cc6ee46df30040791beb47afeac6fa650c038407b11d012e
+/Users/bridgetebeling/Downloads/MiniRacketProject/test/Spec.hs:
+  hash: 2fbd14b119a40eaca54f6255686c7cfbe8ff26a9c18d79ec474a61225232d324
